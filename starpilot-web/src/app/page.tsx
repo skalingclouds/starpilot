@@ -170,6 +170,7 @@ export default function HomePage() {
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
+      e.preventDefault();
       handleSearch()
     }
   }
