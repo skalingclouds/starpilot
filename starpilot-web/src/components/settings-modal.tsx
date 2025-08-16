@@ -177,7 +177,7 @@ export function SettingsModal({ children, onSettingsUpdate }: SettingsModalProps
             <CardHeader>
               <CardTitle className="text-lg">GitHub Personal Access Token</CardTitle>
               <CardDescription>
-                Required to fetch your starred repositories. Needs 'user:read' scope permission.
+                Required to fetch your starred repositories. Your token should have the <code>repo</code> scope if you want to access private starred repositories. For public stars, no additional scope is required.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
