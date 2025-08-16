@@ -201,7 +201,7 @@ export default function HomePage() {
     }
   }
 
-  const isConfigured = settings.githubToken && settings.openaiApiKey
+  const isConfigured = !!settings.githubToken
   const hasRepos = allRepos.length > 0
 
   return (
