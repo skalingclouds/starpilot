@@ -85,8 +85,15 @@ export default function HomePage() {
   }, [settings.githubToken, toast])
 
   const handleSearch = async () => {
-    if (!searchQuery.trim()) return
-    
+    if (!searchQuery.trim()) {
+      toast({
+        title: 'Empty search query',
+        description: 'Please enter a search term before searching.',
+        variant: 'destructive'
+      })
+      return
+    }
+
     if (allRepos.length === 0) {
       toast({
         title: 'No repositories loaded',
