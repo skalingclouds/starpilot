@@ -15,7 +15,7 @@ export async function GET(request: NextRequest) {
     const token = authHeader.substring(7) // Remove 'Bearer ' prefix
     const githubService = new GitHubService(token)
     
-    const searchParams = request.nextUrl.searchParams
+    const {searchParams} = request.nextUrl
     const page = parseInt(searchParams.get('page') || '1')
     const perPage = parseInt(searchParams.get('per_page') || '100')
     const fetchAll = searchParams.get('all') === 'true'
