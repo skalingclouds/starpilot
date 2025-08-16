@@ -524,9 +524,9 @@ export default function HomePage() {
                 Try adjusting your search query or using a different search mode.
               </p>
               <div className="flex justify-center space-x-2">
-                <Button variant="outline" onClick={() => { setSearchQuery(''); setHasSearched(false) }}>
-                  Clear Search
-                </Button>
+<Button variant="outline" onClick={() => { setSearchQuery(''); setHasSearched(false); setSearchResults([]); }}>
+  Clear Search
+</Button>
                 <Button variant="outline" onClick={() => setSearchMode(searchMode === 'semantic' ? 'keyword' : 'semantic')}>
                   Try {searchMode === 'semantic' ? 'Keyword' : 'Semantic'} Search
                 </Button>
